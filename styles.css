@@ -1629,14 +1629,28 @@ html:has(#first-work:hover) .home,
 html:has(#first-image-container:hover) .home {
   background-color: #f0f0f0;
 }
+html:has(#first-work:hover) .nav-header,
+html:has(#first-image-container:hover) .nav-header {
+  background-color: #f0f0f0;
+}
 
 /* Second image hover */
 html:has(.work-item[data-color="#58886C"]:hover) .home {
   background-color: #58886C;
 }
+html:has(.work-item[data-color="#58886C"]:hover) .nav-header {
+  background-color: #58886C;
+  color: white;
+}
+html:has(.work-item[data-color="#58886C"]:hover) .nav-header a {
+  color: white;
+}
 
 /* Third image hover */
 html:has(.work-item[data-color="#ecbec3"]:hover) .home {
+  background-color: #ECBEC3;
+}
+html:has(.work-item[data-color="#ecbec3"]:hover) .nav-header {
   background-color: #ECBEC3;
 }
 
@@ -1644,15 +1658,32 @@ html:has(.work-item[data-color="#ecbec3"]:hover) .home {
 html:has(.work-item[data-color="#7C7763"]:hover) .home {
   background-color: #7C7763;
 }
+html:has(.work-item[data-color="#7C7763"]:hover) .nav-header {
+  background-color: #7C7763;
+  color: white;
+}
+html:has(.work-item[data-color="#7C7763"]:hover) .nav-header a {
+  color: white;
+}
 
 /* Fifth image hover */
 html:has(.work-item[data-color="#FFB84F"]:hover) .home {
+  background-color: #FFB84F;
+}
+html:has(.work-item[data-color="#FFB84F"]:hover) .nav-header {
   background-color: #FFB84F;
 }
 
 /* Sixth image hover */
 html:has(.work-item[data-color="#CA6A17"]:hover) .home {
   background-color: #CA6A17;
+}
+html:has(.work-item[data-color="#CA6A17"]:hover) .nav-header {
+  background-color: #CA6A17;
+  color: white;
+}
+html:has(.work-item[data-color="#CA6A17"]:hover) .nav-header a {
+  color: white;
 }
 
 /* Background transition */
@@ -1670,7 +1701,11 @@ body, .special-bg {
   padding-bottom: 17px;
   display: grid;
   grid-template-columns: auto 80px 110px;
-  transition: background 0.5s;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.nav-header a {
+  transition: color 0.5s ease;
 }
 
 .nav-info, .nav-works {
